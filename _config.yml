@@ -1,0 +1,45 @@
+permalink: /:categories/:title/
+markdown: kramdown
+prose:
+  media: 'images'
+  rooturl: '_posts'
+  ignore:
+    - index.md
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "blog"
+      - name: "categories"
+        label: "category"
+        field:
+          element: "select"
+          options:
+            - name: "blog"
+              value: "blog"
+            - name: "projects"
+              value: "projects"
+            - name: "updates"
+              value: "updates"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "author"
+        field:
+          element: "text"
+          label: "author"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          alterable: true
+          placeholder: "Choose Tags"
+          options:
+            - name: "Open referral"
+              value: "open-referral"
